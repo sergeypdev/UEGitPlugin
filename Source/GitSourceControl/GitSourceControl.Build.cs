@@ -3,6 +3,7 @@
 // Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
 // or copy at http://opensource.org/licenses/MIT)
 
+using System.Linq;
 using UnrealBuildTool;
 
 public class GitSourceControl : ModuleRules
@@ -29,5 +30,7 @@ public class GitSourceControl : ModuleRules
 		{
 			PrivateDependencyModuleNames.Add("ToolMenus");
 		}
+
+		PublicDefinitions.Add("GIT_USE_CUSTOM_LFS=0");
 	}
 }
